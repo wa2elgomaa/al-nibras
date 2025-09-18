@@ -1,0 +1,27 @@
+*Header**
+1-ask for the logo 
+2-change the social icons
+3-should we add a search bar in the header section
+
+*hero** 
+2-talk more about the right section
+
+**video** 
+ 1-replace the video
+2-the white space after the video 
+
+**our services** 
+1- change the height of panles 
+
+**how it work** 
+1- the height of each step 
+2-  the faq where should i put it
+
+**Our Partners**
+1-slider color **
+
+**team** 
+1-social media icons
+
+**footer**
+1-logo change
