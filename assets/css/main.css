@@ -3233,7 +3233,7 @@ input[type=color] {
 .tp-ff-fontawesome {
   font-family: var(--tp-ff-fontawesome);
 }
-
+.space-nowrap{white-space: nowrap;}
 /*----------------------------------------*/
 /*  2.3 scrollToTop
 /*----------------------------------------*/
