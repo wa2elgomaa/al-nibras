@@ -12350,10 +12350,10 @@ body.tp-magic-cursor #magic-cursor {
   }
 }
 .tp-service-cst-item:hover .tp-service-cst-content {
-  background: var(--tp-common-green-2);
+  background: var(--tp-theme-primary);
 }
 .tp-service-cst-item:hover .tp-service-cst-item-border {
-  border-color: #A4D519;
+  border-color: #e9730cff;
 }
 .tp-service-cst-item:hover .tp-service-cst-thumb img {
   transform: scale(1.1);
