@@ -492,6 +492,79 @@
 	});
 	}
 
+	//hero content toggle // 
+
+   document.addEventListener('DOMContentLoaded', function() {
+            // Content data
+            var contentData = {
+                service1: {
+                    title: "Rental Dispute Center services",
+                    text: "Through its one-stop platform, Al Nibras Group provides the instruction and support concerning any rental dispute through the highly-experienced rental dispute specialists, who have the credential and competency to not only resolve rental issues or disagreements, but also to put you onto all your rights and obligations. To do so, tenants and landlords must be aware of their rights, obligations and responsibilities. Our series of specialists provide a tailored understanding of rental dispute laws and the most beneficial channels for your case."
+                },
+                service2: {
+                    title: "Professional Translation", 
+                    text: "with a pool of experienced linguists, we provide world-class translation & localization services that fit every need and goal , ensuring on-time delivery and professional project execution."
+                },
+                service3: {
+                    title: "Document Clearing Services",
+                    text: "Document clearing is the process of registering a new company or business in Dubai, covering all the required documents such as certifications, licensees, and authorizations. The required documents are determined depending on the type of company, the number of employees, the partners, and their nationalities."
+                }
+            };
+function showContent(serviceKey) {
+                var titleElement = document.querySelector('.content-title');
+                var textElement = document.querySelector('.content-paragraph');
+                
+                if (titleElement && textElement && contentData[serviceKey]) {
+                    // Add fade-out animation
+                    titleElement.classList.add('fade-out');
+                    textElement.classList.add('fade-out');
+                    
+                    // Update content after fade-out
+                    setTimeout(function() {
+                        titleElement.textContent = contentData[serviceKey].title;
+                        textElement.textContent = contentData[serviceKey].text;
+                        
+                        // Remove fade-out and add fade-in
+                        titleElement.classList.remove('fade-out');
+                        textElement.classList.remove('fade-out');
+                        
+                        // Add slide-up animation
+                        titleElement.classList.add('slide-up-enter');
+                        textElement.classList.add('slide-up-enter');
+                        
+                        // Clean up animation classes
+                        setTimeout(function() {
+                            titleElement.classList.remove('slide-up-enter');
+                            textElement.classList.remove('slide-up-enter');
+                        }, 500);
+                        
+                    }, 300); // Wait for fade-out to complete
+                }
+            }
+
+            // Add click event listeners to all links
+            var links = document.querySelectorAll('.link-item');
+            links.forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Remove active class from all links
+                    links.forEach(function(l) {
+                        l.classList.remove('active');
+                    });
+                    
+                    // Add active class to clicked link
+                    this.classList.add('active');
+                    
+                    // Get service key and show content
+                    var serviceKey = this.getAttribute('data-service');
+                    showContent(serviceKey);
+                });
+            });
+
+            // Initialize with first content
+            showContent('service1');
+        });
 	////////////////////////////////////////////////////
 	// 18. portfolio panel
 	let tl = gsap.timeline();

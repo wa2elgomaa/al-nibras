@@ -168,10 +168,10 @@ li,
   --tp-common-white: #fff;
   --tp-common-white-2: #f0f0f0;
   --tp-common-black: #030303;
-  --tp-common-black-1: #302610ff;
+  --tp-common-black-1: #232220ff;
   --tp-common-black-2: #0d0d0d;
   --tp-common-black-3: #000;
-  --tp-common-black-4: #594f40ff;
+  --tp-common-black-4: #474441ff;
   --tp-common-black-5: #111112;
   --tp-common-black-6: #333333;
   --tp-common-yellow: #fff112;
@@ -3878,6 +3878,46 @@ input[type=color] {
 /*----------------------------------------*/
 /*  2.1 Animations
 /*----------------------------------------*/
+/* Animation classes */
+        .fade-out {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        .fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .slide-up-enter {
+            animation: slideUpEnter 0.5s ease forwards;
+        }
+
+        .slide-up-exit {
+            animation: slideUpExit 0.3s ease forwards;
+        }
+
+        @keyframes slideUpEnter {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUpExit {
+            from {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            to {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+        }
 @keyframes headerSlideDown {
   0% {
     margin-top: -150px;
@@ -9216,6 +9256,15 @@ body.tp-magic-cursor #magic-cursor {
     padding-top: 150px;
   }
 }
+ .content-paragraph{
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.5s ease 0.4s;
+      }
+   .content-title{
+      transform: translateY(0);
+      transition: all 0.5s ease;    
+   }
 .tp-hero-title {
   font-weight: 700;
   font-size: 100px;
@@ -11430,7 +11479,7 @@ body.tp-magic-cursor #magic-cursor {
   top: 61%;
   -webkit-animation: mymove 1.2s infinite;
   animation: mymove 1.2s infinite;
-  background: #b4e717;
+  background: #e7ac17ff;
 }
 .tp-about-it-blur {
   position: absolute;
@@ -11438,7 +11487,7 @@ body.tp-magic-cursor #magic-cursor {
   left: 0;
   width: 400px;
   height: 400px;
-  background-color: #D5FFDD;
+  background-color: #f5c994ff;
   border-radius: 50%;
   filter: blur(180px);
   z-index: -1;
@@ -17265,7 +17314,8 @@ body.tp-magic-cursor #magic-cursor {
 /*  7.2 awards css start
 /*----------------------------------------*/
 
-.tp-awards-bg-shape {
+.tp-awards-bg-shape,
+.tp-skills-bg-shape {
   position: absolute;
   top: 0;
   left: 0;
@@ -19075,7 +19125,7 @@ body.tp-magic-cursor #magic-cursor {
   width: 100%;
 }
 .tp-process-it-bg {
-  background: linear-gradient(180deg, #f6a086ff 0%, rgba(239, 210, 160, 0) 100%);
+  background: linear-gradient(180deg, #f6a086ff 0%, rgba(239, 210, 160, 0) 70%);
 }
 .tp-process-it-video {
   position: absolute;
