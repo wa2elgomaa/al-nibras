@@ -12379,7 +12379,6 @@ body.tp-magic-cursor #magic-cursor {
   }
 }
 .tp-service-cst-item {
-  border-right: 1px solid #26433E;
   padding-right: 27px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 574.98px) {
@@ -12389,7 +12388,7 @@ body.tp-magic-cursor #magic-cursor {
   }
 }
 .tp-service-cst-item-border {
-  border-bottom: 1px solid #DBE1DD;
+  border-bottom: 1px solid #f0c48fff;
   padding-bottom: 24px;
   margin-bottom: 20px;
 }
@@ -12400,9 +12399,19 @@ body.tp-magic-cursor #magic-cursor {
 }
 .tp-service-cst-item:hover .tp-service-cst-content {
   background: var(--tp-theme-primary);
+
 }
-.tp-service-cst-item:hover .tp-service-cst-item-border {
-  border-color: #e9730cff;
+.tp-service-cst-item:hover .tp-service-cst-content p {
+color:white;
+}
+.tp-service-cst-item:hover .tp-service-cst-content h5 {
+color:white;
+}
+.tp-service-cst-item:hover .tp-service-cst-content .button-work{
+  color:white;
+}
+cst-item:hover .tp-service-cst-item-border {
+  border-color: #e9730cff; 
 }
 .tp-service-cst-item:hover .tp-service-cst-thumb img {
   transform: scale(1.1);
