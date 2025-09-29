@@ -3359,6 +3359,7 @@ input[type=color] {
 /*----------------------------------------*/
 /*  2.5 Buttons
 /*----------------------------------------*/
+
 .tp-btn-lg {
   padding: 19px 21px;
 }
@@ -12323,7 +12324,7 @@ body.tp-magic-cursor #magic-cursor {
 }
 .tp-service-details-content ul li i {
   font-size: 18px;
-  color: var(--tp-grey-1);
+  color: #f15a2a;
   margin-right: 10px;
   margin-top: 4px;
 }
