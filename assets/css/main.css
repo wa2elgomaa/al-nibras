@@ -3731,6 +3731,7 @@ input[type=color] {
   background: var(--tp-theme-primary);
   color:white;
 }
+
 .tp-btn-group .tp-btn-circle {
   text-align: center;
   width: 48px;
@@ -6022,12 +6023,18 @@ body.tp-magic-cursor #magic-cursor {
 }
 .tp-header-2-menu-btn {
   border-radius: 100%;
-  background: rgba(255, 255, 255, 0.1);
+  background: white;
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(104px);
   width: 48px;
   height: 48px;
   padding-right: 14px;
+}
+.tp-header-2-menu-btn:hover{
+  background:var(--tp-theme-primary);
+}
+.aleric-dark .tp-header-sidebar-btn:hover span{
+  background:white;
 }
 .tp-header-2-menu-btn span {
   background: var(--tp-theme-primary);
@@ -6035,7 +6042,9 @@ body.tp-magic-cursor #magic-cursor {
   margin: 4px 0 4px auto;
   border-radius: 10px;
   height: 2px;
+  color:black;
 }
+
 .tp-header-2-menu-btn span:nth-child(2) {
   width: 20px;
 }
@@ -25386,8 +25395,9 @@ cst-item:hover .tp-service-cst-item-border {
   border-color: transparent;
 }
 .aleric-dark .tp-header-sidebar-btn span {
-  background: var(--tp-common-white);
+  background: black;
 }
+
 .aleric-dark .tp-header-ai-bg {
   background: rgba(38, 37, 40, 0.9);
 }
