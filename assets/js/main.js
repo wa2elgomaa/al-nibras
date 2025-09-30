@@ -2178,6 +2178,47 @@ function showContent(serviceKey) {
 		})
 	}
 
+	////////////////////// word animate 
+	const words = ['ready', 'searching', 'aiming'];
+const typewriterElement = document.getElementById('typewriter');
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+let typingSpeed = 150;
+
+function type() {
+    const currentWord = words[wordIndex];
+    
+    if (isDeleting) {
+        // Remove character
+        typewriterElement.textContent = currentWord.substring(0, charIndex - 1);
+        charIndex--;
+        typingSpeed = 100;
+    } else {
+        // Add character
+        typewriterElement.textContent = currentWord.substring(0, charIndex + 1);
+        charIndex++;
+        typingSpeed = 150;
+    }
+
+    // Check if word is complete
+    if (!isDeleting && charIndex === currentWord.length) {
+        // Pause at end of word
+        typingSpeed = 2000;
+        isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+        // Move to next word
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+        typingSpeed = 500;
+    }
+
+    setTimeout(type, typingSpeed);
+}
+
+// Start typing effect
+type();
+
 	////////////////////////////////////////////////////
 	// 65. tp-map-pin
 	document.querySelectorAll('.tp-map-pin').forEach(pin => {
